@@ -23,3 +23,17 @@ code {
   text-decoration: none;
   text-align: center;
 }
+
+.liste{
+  color: rgba(255,255,255, .55);
+  text-decoration: none;
+  text-align: center;
+}
+
+.liste:hover{
+  color: rgba(255,255,255, .80);
+}
+
+div.dropdown-menu.show{
+  padding:0;
+}
