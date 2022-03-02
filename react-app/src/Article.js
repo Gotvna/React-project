@@ -5,7 +5,7 @@ import Footer from './Component/Footer';
 import { Row, Col, Container} from 'react-bootstrap';
 
 
-class Acceuil extends Component {
+class Article extends Component {
     render() {
         return(
             <div>
@@ -28,4 +28,4 @@ class Acceuil extends Component {
         );
     }
 }
-export default Acceuil;
+export default Article;

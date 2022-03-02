@@ -5,16 +5,21 @@ import {
   Routes
 } from 'react-router-dom';
 import Acceuil from './Acceuil';
+
+
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
   return (
-   <Router>
-    <Routes> 
-      <Route exact path='/' element={<Acceuil />} />
-    </Routes>
-   </Router>
+    <div class="app">
+      <Router>
+        <Routes> 
+          <Route exact path='/' element={<Acceuil />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
