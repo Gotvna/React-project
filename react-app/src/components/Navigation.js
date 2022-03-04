@@ -11,16 +11,6 @@ const Navigation = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Link id="link" to="/">Home</Link>
-              <NavDropdown title="Articles" id="basic-nav-dropdown">
-                <NavDropdown.Item className="bg-dark"><Link className="liste" to="./Article/Encre">Encre</Link></NavDropdown.Item>
-                <NavDropdown.Item className="bg-dark"><Link className="liste" to="./Article/Pinceaux">Pinceaux</Link></NavDropdown.Item>
-                <NavDropdown.Item className="bg-dark"><Link className="liste" to="./Article/Statuettes">Statuettes</Link></NavDropdown.Item>
-                <NavDropdown.Item className="bg-dark"><Link className="liste" to="./Article/HabitsTrad">Habits Traditionnels</Link></NavDropdown.Item>
-                <NavDropdown.Item className="bg-dark"><Link className="liste" to="./Article/Papiers">Papiers</Link></NavDropdown.Item>
-                <NavDropdown.Item className="bg-dark"><Link className="liste" to="./Article/PorteBonheur">Porte-Bonheur</Link></NavDropdown.Item>
-                <NavDropdown.Item className="bg-dark"><Link className="liste" to="./Article/Vases">Vases</Link></NavDropdown.Item>
-                <NavDropdown.Item className="bg-dark"><Link className="liste" to="./Article/Encre">Encre</Link></NavDropdown.Item>
-              </NavDropdown>
             </Nav>
           </Navbar.Collapse>
         </Container>

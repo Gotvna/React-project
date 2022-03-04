@@ -4,19 +4,14 @@
   "info": {
     "singularName": "categorie",
     "pluralName": "categories",
-<<<<<<< HEAD
     "displayName": "categorie",
     "description": ""
-=======
-    "displayName": "Categorie"
->>>>>>> 8e97fe7bd4a37b00860838cac4c042e6354badbc
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-<<<<<<< HEAD
     "name": {
       "type": "string"
     },
@@ -27,18 +22,11 @@
       "type": "media",
       "multiple": false,
       "required": false,
-=======
-    "Titre": {
-      "type": "string"
-    },
-    "Image": {
->>>>>>> 8e97fe7bd4a37b00860838cac4c042e6354badbc
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-<<<<<<< HEAD
       ]
     },
     "minprice": {
@@ -52,20 +40,6 @@
       "relation": "oneToMany",
       "target": "api::article.article",
       "mappedBy": "categorie"
-=======
-      ],
-      "type": "media",
-      "multiple": false
-    },
-    "DescriptionAcceuil": {
-      "type": "text"
-    },
-    "PrixMin": {
-      "type": "decimal"
-    },
-    "PrixMax": {
-      "type": "decimal"
->>>>>>> 8e97fe7bd4a37b00860838cac4c042e6354badbc
     }
   }
 }
