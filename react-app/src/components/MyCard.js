@@ -13,7 +13,7 @@ const MyCard = (props) => {
           min price: {props.categorie.attributes.minprice} <br />
           max price: {props.categorie.attributes.maxprice} <br />
         </Card.Text>
-        <Button variant="primary"><Link to={"/categorie/"+props.categorie.id}>Plus d'articles</Link></Button>
+        <Button variant="primary" className="bg-dark" ><Link to={"/categorie/"+props.categorie.id}>Plus d'articles</Link></Button>
       </Card.Body>
     </Card>
   );

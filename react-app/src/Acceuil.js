@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import Navigation from './components/Navigation';
 import MyCard from './components/MyCard';
 import Footer from './components/Footer';
-import { Row, Container} from 'react-bootstrap';
+import { Row, Col, Container} from 'react-bootstrap';
+import background from './img/background.jpg';
 
 
 class Acceuil extends Component {
@@ -23,8 +24,8 @@ class Acceuil extends Component {
     }
     render() {
         return(
-            <div className="App">
-               <Navigation categories={this.state.categories} />
+            <div className="App" style={{backgroundImage: `url(${background})`}}>
+               <Navigation categories={this.state.categories} sticky="top"/>
                 <br />
                 <Container>
                     <Row>
@@ -33,7 +34,7 @@ class Acceuil extends Component {
                         </Col>)}
                     </Row>  
                 </Container>
-                <Footer />
+                <Footer sticky="bottom"/>
             </div>
         );
     }

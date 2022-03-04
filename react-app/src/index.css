@@ -7,6 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.App{
+  height:100vh;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -45,5 +49,18 @@ div.dropdown-menu.show a{
 }
 
 div.dropdown-menu.show a:hover {
+  color:rgba(255,255,255, .85);
+}
+
+.btn-primary {
+  border-color:#212529!important;
+}
+
+.btn-primary a {
+  color:rgba(255,255,255, .55);
+  text-decoration: none!important;
+}
+
+.btn-primary a:hover {
   color:rgba(255,255,255, .85);
 }
