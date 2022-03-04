@@ -5,6 +5,7 @@ import {
   Routes
 } from 'react-router-dom';
 import Acceuil from './Acceuil';
+import Category from './Category';
 
 
 
@@ -18,6 +19,7 @@ function App() {
       <Router>
         <Routes> 
           <Route exact path='/' element={<Acceuil />} />
+          <Route exact path='/category' element={<Category />} />
         </Routes>
       </Router>
     </div>

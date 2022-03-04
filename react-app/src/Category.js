@@ -5,30 +5,31 @@ import Footer from './components/Footer';
 import { Row, Container} from 'react-bootstrap';
 
 
-class Acceuil extends Component {
+
+class Category extends Component {
 
     constructor(props){
         super(props)
         this.state={
-           categories:[]
+           articles:[]
         }
       }
 
     async componentDidMount() {
     //generalement utilisé pour les appels réseaux
     const response = await fetch('http://localhost:1337/api/categories?populate=*', {method: 'GET', headers: {'Accept': 'application/json', 'Content-Type':'application/json'}})
-    const categories = await response.json()
-    this.setState({categories:categories})
+    const articles = await response.json()
+    this.setState({articles:articles})
 
     }
     render() {
         return(
-            <div className="App">
-               <Navigation categories={this.state.categories} />
+            <div className="Category">
+               <Navigation articles={this.state.articles} />
                 <br />
                 <Container>
                     <Row>
-                        {this.state.categories.data && this.state.categories.data.map((categorie,i)=><MyCard categorie={categorie} />)}
+                        {this.state.articles.data && this.state.articles.data.map((article,i)=><MyCard article={article} />)}
                     </Row>  
                 </Container>
                 <Footer />
@@ -36,4 +37,4 @@ class Acceuil extends Component {
         );
     }
 }
-export default Acceuil;
+export default Category;
