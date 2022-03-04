@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "articles",
+  "collectionName": "categories",
   "info": {
-    "singularName": "article",
-    "pluralName": "articles",
-    "displayName": "Article",
+    "singularName": "categorie",
+    "pluralName": "categories",
+    "displayName": "categorie",
     "description": ""
   },
   "options": {
@@ -18,9 +18,6 @@
     "description": {
       "type": "text"
     },
-    "price": {
-      "type": "decimal"
-    },
     "image": {
       "type": "media",
       "multiple": false,
@@ -32,11 +29,17 @@
         "audios"
       ]
     },
-    "categorie": {
+    "minprice": {
+      "type": "decimal"
+    },
+    "maxprice": {
+      "type": "decimal"
+    },
+    "articles": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::categorie.categorie",
-      "inversedBy": "articles"
+      "relation": "oneToMany",
+      "target": "api::article.article",
+      "mappedBy": "categorie"
     }
   }
 }
