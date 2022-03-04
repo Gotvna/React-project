@@ -8,7 +8,7 @@ const MyCard = (props) => {
       <Card.Body>
         <Card.Title>{props.categorie.attributes.name}</Card.Title> 
         <Card.Text>
-          {props.categorie.attributes.description} <br />
+          Descriptions: {props.categorie.attributes.description} <br />
           min price: {props.categorie.attributes.minprice} <br />
           max price: {props.categorie.attributes.maxprice} <br />
         </Card.Text>

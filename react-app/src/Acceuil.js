@@ -22,10 +22,9 @@ class Acceuil extends Component {
 
     }
     render() {
-        console.log(this.state.categories);
         return(
             <div className="App">
-                <Navigation sticky="top" />
+               <Navigation categories={this.state.categories} />
                 <br />
                 <Container>
                     <Row>
