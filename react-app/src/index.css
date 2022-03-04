@@ -13,7 +13,7 @@ code {
 }
 
 #Card {
-  width: 18rem;
+  width: 100% ;
   margin-bottom: 9rem;
 }
 
@@ -36,4 +36,14 @@ code {
 
 div.dropdown-menu.show{
   padding:0;
+}
+
+div.dropdown-menu.show a{
+  text-decoration: none;
+  background-color: #282c34;
+  color:rgba(255,255,255, .55);
+}
+
+div.dropdown-menu.show a:hover {
+  color:rgba(255,255,255, .85);
 }

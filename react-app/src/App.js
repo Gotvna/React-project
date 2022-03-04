@@ -10,6 +10,7 @@ import Acceuil from './Acceuil';
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Categorie from './Categorie';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Router>
         <Routes> 
           <Route exact path='/' element={<Acceuil />} />
+          <Route exact path='/categorie/:id' element={<Categorie />} />
         </Routes>
       </Router>
     </div>
