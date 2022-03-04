@@ -15,6 +15,7 @@
     "name": {
       "type": "string"
     },
+<<<<<<< HEAD
     "description": {
       "type": "text"
     },
@@ -22,6 +23,15 @@
       "type": "decimal"
     },
     "image": {
+=======
+    "Prix": {
+      "type": "decimal"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Photo": {
+>>>>>>> 8e97fe7bd4a37b00860838cac4c042e6354badbc
       "type": "media",
       "multiple": false,
       "required": false,
@@ -31,12 +41,15 @@
         "videos",
         "audios"
       ]
+<<<<<<< HEAD
     },
     "categorie": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::categorie.categorie",
       "inversedBy": "articles"
+=======
+>>>>>>> 8e97fe7bd4a37b00860838cac4c042e6354badbc
     }
   }
 }

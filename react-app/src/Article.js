@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import Navigation from './Component/Navigation';
-import MyCard from './Component/MyCard';
-import Footer from './Component/Footer';
+import Navigation from './components/Navigation';
+import MyCard from './components/MyCard';
+import Footer from './components/Footer';
 import { Row, Col, Container} from 'react-bootstrap';
+
 
 
 class Article extends Component {
