@@ -1,9 +1,10 @@
 import React from "react"
 import { Card, Button } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 
 const MyCard = (props) => {
   return(
-    <Card id="Card">
+    <Card id="Card" style={props.categorie.attributes.image}>
       <Card.Img variant="top" src="holder.js/100px180" />
       <Card.Body>
         <Card.Title>{props.categorie.attributes.name}</Card.Title> 
@@ -12,7 +13,7 @@ const MyCard = (props) => {
           min price: {props.categorie.attributes.minprice} <br />
           max price: {props.categorie.attributes.maxprice} <br />
         </Card.Text>
-        <Button variant="primary">Plus d'articles</Button>
+        <Button variant="primary"><Link to={"/categorie/"+props.categorie.id}>Plus d'articles</Link></Button>
       </Card.Body>
     </Card>
   );

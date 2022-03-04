@@ -28,7 +28,9 @@ class Acceuil extends Component {
                 <br />
                 <Container>
                     <Row>
-                        {this.state.categories.data && this.state.categories.data.map((categorie,i)=><MyCard categorie={categorie} />)}
+                        {this.state.categories.data && this.state.categories.data.map((categorie,i)=><Col xd={12} md={{ span: 3 }}>
+                            <MyCard categorie={categorie} />
+                        </Col>)}
                     </Row>  
                 </Container>
                 <Footer />
