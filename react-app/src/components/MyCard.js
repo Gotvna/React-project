@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 const MyCard = (props) => {
   return(
     <Card id="Card" style={props.categorie.attributes.image}>
-      <Card.Img variant="top" src="holder.js/100px180" />
       <Card.Body>
         <Card.Title>{props.categorie.attributes.name}</Card.Title> 
         <Card.Text>

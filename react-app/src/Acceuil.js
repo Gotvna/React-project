@@ -26,9 +26,9 @@ class Acceuil extends Component {
         return(
             <div className="App" style={{backgroundImage: `url(${background})`}}>
                <Navigation categories={this.state.categories} sticky="top"/>
-                <br />
+                
                 <Container>
-                    <Row>
+                    <Row className="align-items-center vh-100">
                         {this.state.categories.data && this.state.categories.data.map((categorie,i)=><Col xd={12} md={{ span: 3 }}>
                             <MyCard categorie={categorie} />
                         </Col>)}

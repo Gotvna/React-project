@@ -19,6 +19,7 @@ code {
 #Card {
   width: 100% ;
   margin-bottom: 9rem;
+  background-color: rgba(255,255,255, .80);
 }
 
 #link{
@@ -63,4 +64,10 @@ div.dropdown-menu.show a:hover {
 
 .btn-primary a:hover {
   color:rgba(255,255,255, .85);
+}
+
+.footer-copyright {
+  background-color: rgba(40, 44, 52, .85);
+  color:rgba(255,255,255, .55);
+  height: 70px;
 }
