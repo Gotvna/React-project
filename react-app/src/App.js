@@ -11,7 +11,7 @@ import Categorie from './Categorie';
 
 function App() {
   return (
-    <div class="app">
+    <div className="app">
       <Router>
         <Routes> 
           <Route exact path='/' element={<Acceuil />} />
