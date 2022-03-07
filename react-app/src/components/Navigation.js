@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 
 const Navigation = (props) => {
+    console.log("props",props);
     return(
         <Navbar bg="dark" variant="dark">
         <Container>

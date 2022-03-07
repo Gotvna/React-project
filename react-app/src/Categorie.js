@@ -7,13 +7,8 @@ import { useLocation, useParams,useNavigate  } from "react-router-dom";
 
 
 class CategorieInner extends Component {
-    constructor(props){
-        super(props)
-        this.state={
-           articles:[]
-        }
-      }
 
+<<<<<<< HEAD
     async componentDidMount() {
         //console.log(this.props.useParams());
         const id = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
@@ -22,6 +17,8 @@ class CategorieInner extends Component {
         this.setState({articles:articles})
 
     }
+=======
+>>>>>>> 84234942fd5088c109d336c4bfc773166a3f6905
     render() {
         return(
             <div className="App" >
@@ -34,6 +31,15 @@ class CategorieInner extends Component {
                     </Row>  
                 </Container>
                 <Footer />
+                <Navigation categories={this.props.categories} />
+                <br />
+                <Container>
+                    <Row>
+                        {this.state.articles.data && this.state.articles.data.map((article,i)=><Col xd={12} md={{ span: 3 }}>
+                            <MyCard article={article} />
+                        </Col>)}
+                    </Row>  
+                </Container>
             </div>
         );
     }
