@@ -32,6 +32,7 @@ class App extends Component {
         <Routes> 
           <Route exact path='/' element={<Acceuil categories={this.state.categories} />} />
           <Route exact path='/categorie/:id' element={<Categorie categories={this.state.categories} />} />
+          
         </Routes>
       </Router>
     </div>

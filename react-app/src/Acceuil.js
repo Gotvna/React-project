@@ -3,15 +3,12 @@ import Navigation from './components/Navigation';
 import MyCard from './components/MyCard';
 import Footer from './components/Footer';
 import { Row, Col, Container} from 'react-bootstrap';
-import background from './img/background.jpg';
-import App from './App';
-
 
 class Acceuil extends Component {
 
     render() {
         return(
-            <div className="App" style={{backgroundImage: `url(${background})`}}>
+            <div className="App">
                <Navigation categories={this.props.categories} sticky="top"/>
                 
                 <Container>
