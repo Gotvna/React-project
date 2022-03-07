@@ -13,6 +13,8 @@ class Article extends Component {
         <Navigation categories={this.props.categories} sticky="top"/>    
           <Container>
             <Row>
+              <Col></Col>
+              <Col></Col>
             </Row>  
           </Container>
         <Footer sticky="bottom"/>

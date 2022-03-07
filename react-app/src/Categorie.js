@@ -29,15 +29,6 @@ class CategorieInner extends Component {
                     </Row>  
                 </Container>
                 <Footer />
-                <Navigation categories={this.props.categories} />
-                <br />
-                <Container>
-                    <Row>
-                        {this.state.articles.data && this.state.articles.data.map((article,i)=><Col xd={12} md={{ span: 3 }}>
-                            <MyCard article={article} />
-                        </Col>)}
-                    </Row>  
-                </Container>
             </div>
         );
     }
