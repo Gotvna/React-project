@@ -10,26 +10,22 @@ class CategorieInner extends Component {
     constructor(props){
         super(props)
         this.state={
-           articles:[],
-           categories:[]
+           articles:[]
         }
       }
 
     async componentDidMount() {
         //console.log(this.props.useParams());
         const id = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
-        const response = await fetch('http://localhost:1337/api/articles?populate=*&filters=categorie.id='+id, {method: 'GET', headers: {'Accept': 'application/json', 'Content-Type':'application/json'}})
+        const response = await fetch('http://localhost:1337/api/articles?populate=*&filters[categorie][id][$eq]='+id, {method: 'GET', headers: {'Accept': 'application/json', 'Content-Type':'application/json'}})
         const articles = await response.json()
         this.setState({articles:articles})
-        const responseCat = await fetch('http://localhost:1337/api/categories?populate=*', {method: 'GET', headers: {'Accept': 'application/json', 'Content-Type':'application/json'}})
-        const categories = await responseCat.json()
-        this.setState({categories:categories})
 
     }
     render() {
         return(
             <div className="App" >
-               <Navigation categories={this.state.categories} sticky="top"/>
+               <Navigation categories={this.props.categories} sticky="top"/>
                 <Container>
                     <Row className="align-items-center vh-100">
                         {this.state.articles.data && this.state.articles.data.map((article,i)=><Col xd={12} md={{ span: 3 }}>

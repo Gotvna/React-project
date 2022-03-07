@@ -4,13 +4,12 @@ import { Link } from "react-router-dom";
 
 const MyArticleCard = (props) => {
   return(
-    <Card id="Card" style={props.articles.attributes.image}>
+    <Card id="Card">
       <Card.Body>
-        <Card.Title>{props.articles.attributes.name}</Card.Title> 
+        <Card.Title>{this.props.articles.attributes.name}</Card.Title> 
         <Card.Text>
-          {props.article.attributes.description} <br />
-          min price: {props.article.attributes.minprice} <br />
-          max price: {props.article.attributes.maxprice} <br />
+          {this.props.article.attributes.description} <br />
+          price: {this.props.article.attributes.price} <br />
         </Card.Text>
         <Button variant="primary" className="bg-dark" ><Link to={"/article/"+props.article.id}>details</Link></Button>
       </Card.Body>
