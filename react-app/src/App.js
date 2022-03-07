@@ -1,3 +1,4 @@
+import React, {Component} from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -9,17 +10,34 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Categorie from './Categorie';
 
 
-function App() {
-  return (
-    <div class="app">
+class App extends Component {
+  constructor(props){
+    super(props)
+    this.state={
+      categories:[]
+    }
+  }
+
+  async componentDidMount() {
+  //generalement utilisé pour les appels réseaux
+  const response = await fetch('http://localhost:1337/api/categories?populate=*', {method: 'GET', headers: {'Accept': 'application/json', 'Content-Type':'application/json'}})
+  const categories = await response.json()
+  this.setState({categories:categories})
+  }
+
+  render() {
+    return (
+    <div className="app">
       <Router>
         <Routes> 
-          <Route exact path='/' element={<Acceuil />} />
-          <Route exact path='/categorie/:id' element={<Categorie />} />
+          <Route exact path='/' element={<Acceuil categories={this.state.categories} />} />
+          <Route exact path='/categorie/:id' element={<Categorie categories={this.state.categories} />} />
         </Routes>
       </Router>
     </div>
-  );
+    );
+  }
 }
+
 
 export default App;
