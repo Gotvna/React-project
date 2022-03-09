@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 
+function refreshPage() {
+  window.location.reload(false);
+}
+
 const Navigation = (props) => {
     console.log("props",props);
     return(
@@ -13,7 +17,7 @@ const Navigation = (props) => {
             <Nav className="me-auto">
               <Link id="link" to="/">Home</Link>
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                {props.categories.data && props.categories.data.map((categorie,i)=><NavDropdown.Item><Link to={"/categorie/"+categorie.id} >{categorie.attributes.name}</Link></NavDropdown.Item>)}
+                {props.categories.data && props.categories.data.map((categorie,i)=><NavDropdown.Item onClick={refreshPage}><Link to={"/categorie/"+categorie.id} >{categorie.attributes.name}</Link></NavDropdown.Item>)}
               
               </NavDropdown>
             </Nav>
