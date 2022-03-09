@@ -11,7 +11,7 @@ class Acceuil extends Component {
     render() {
         return(
             <div className="App">
-               <Navigation categories={this.props.categories} sticky="top"/>
+               <Navigation categories={this.props.categories} cart={this.props.cart} sticky="top"/>
                 
                 <Container>
                     <Row className="align-items-center vh-100">
