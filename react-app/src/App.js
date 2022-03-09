@@ -8,14 +8,14 @@ import {
 import Acceuil from './Acceuil';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Categorie from './Categorie';
-
+import Cart from './Cart';
 
 class App extends Component {
-
   constructor(props){
     super(props)
     this.state={
-      categories:[]
+      categories:[],
+      cart:[]
     }
   }
 
@@ -25,15 +25,39 @@ class App extends Component {
   const categories = await response.json()
   console.log(categories)
   this.setState({categories:categories})
+  localStorage.getItem('cart')
   }
+
+  saveCart = () => {
+    localStorage.setItem('cart', JSON.stringify(this.state.cart));  
+  }
+
+  addToCart = (article) => {
+    let cart = this.state.cart;
+    let found = false
+    for (let i=0; i < cart.length; i++){
+      if(cart[i].article.id === article.id) {
+        cart[i].count++;
+        found=true
+        this.setState({cart:cart})
+        return;
+      }
+    }
+    if(!found){
+      cart.push({"article": article, "count": 1});
+      this.setState({cart:cart})
+    }
+  }
+
 
   render() {
     return (
     <div className="app">
       <Router>
         <Routes> 
-          <Route exact path='/' element={<Acceuil categories={this.state.categories} />} />
-          <Route exact path='/categorie/:id' element={<Categorie categories={this.state.categories} />} />   
+          <Route exact path='/' element={<Acceuil categories={this.state.categories} cart={this.state.cart}/>} />
+          <Route exact path='/categorie/:id' element={<Categorie categories={this.state.categories} cart={this.state.cart} addToCart={(a) => this.addToCart(a)} />} />
+          <Route exact path='/Cart' element={<Cart cart={this.state.cart} categories={this.state.categories} />} />
         </Routes>
       </Router>
     </div>
