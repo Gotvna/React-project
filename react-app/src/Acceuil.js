@@ -10,7 +10,7 @@ class Acceuil extends Component {
 
     render() {
         return(
-            <div className="App" style={{backgroundImage: `url(${background})`}}>
+            <div className="App">
                <Navigation categories={this.props.categories} sticky="top"/>
                 
                 <Container>
