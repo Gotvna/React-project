@@ -3,6 +3,8 @@ import Navigation from './components/Navigation';
 import MyCard from './components/MyCard';
 import Footer from './components/Footer';
 import { Row, Col, Container} from 'react-bootstrap';
+import background from './img/background.jpg';
+
 
 class Acceuil extends Component {
 

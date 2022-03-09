@@ -9,9 +9,7 @@ import Acceuil from './Acceuil';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Categorie from './Categorie';
 
-
 class App extends Component {
-
   constructor(props){
     super(props)
     this.state={
