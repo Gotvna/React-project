@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, Container, NavDropdown, Button } from 'react-bootstrap';
 
 const Navigation = (props) => {
     console.log("props",props);
@@ -16,6 +16,7 @@ const Navigation = (props) => {
                 {props.categories.data && props.categories.data.map((categorie,i)=><NavDropdown.Item><Link to={"/categorie/"+categorie.id} >{categorie.attributes.name}</Link></NavDropdown.Item>)}
               
               </NavDropdown>
+              <Button variant="primary" className="bg-dark float-end"><Link to={"/Cart"}>Go to cart</Link></Button>
             </Nav>
           </Navbar.Collapse>
         </Container>
