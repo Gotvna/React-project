@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Navigation from './components/Navigation';
 import MyArticleCard from './components/MyArticleCard';
 import Footer from './components/Footer';
+import Pricing from './components/Pricing';
 import { Row, Col, Container} from 'react-bootstrap';
 import { useLocation, useParams,useNavigate  } from "react-router-dom";
 
@@ -28,6 +29,7 @@ class CategorieInner extends Component {
         return(
             <div className="App" >
                <Navigation categories={this.props.categories} sticky="top"/>
+               <Pricing categories={this.props.categories} />
                 <Container>
                     <Row className="align-items-center vh-100">
                         {this.state.articles.data && this.state.articles.data.map((article,i)=><Col xd={12} md={{ span: 3 }}>
