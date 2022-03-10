@@ -25,7 +25,7 @@ class Categorie extends Component {
     
     render() {
         return(
-            <div className="App" >
+            <div className="App">
                <Navigation categories={this.props.categories} cart={this.props.cart} article={this.state.articles} sticky="top"/>
                 <Container>
                     <Row className="align-items-center vh-100">

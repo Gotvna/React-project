@@ -23,7 +23,7 @@ render() {
         <Container>
           <Row>
             <Col md="12">
-              <Card>
+              <Card id="CartPanier">
                 <Card.Body>
                   <Card.Title>Votre Panier</Card.Title>
                   <Card.Text>
@@ -33,13 +33,13 @@ render() {
                 </Card.Body>
               </Card>
             </Col>
-            {this.props.cart.map((cart,i)=><Col xd={12} md={{ span: 4 }} >
+            {this.props.cart.map((cart,i)=><Col xd={12} md={{ span: 5 }} >
               <Card id="Card" style={{width:'450px'}}>
                 <Row>
-                  <Col md="2">
+                  <Col md="4">
                 {<Card.Img  src={`http://localhost:1337${cart.article.attributes.image.data.attributes.url}`} className="fluid"/>}
                   </Col>
-                  <Col md="10">
+                  <Col md="6">
                 <Card.Body>
                   <Card.Title>{cart.article.attributes.name}</Card.Title> 
                   <Card.Text>
