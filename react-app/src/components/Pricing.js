@@ -1,17 +1,25 @@
 import React, { useState} from "react";
+import { Form, Row, Col } from "react-bootstrap";
 import RangeSlider from 'react-bootstrap-range-slider';
 
 
 const Pricing = (props) => {
   const [ value, setValue ] = useState(0); 
-
+    console.log(props)
   return (
-    <RangeSlider
-      min={this.state.categorie.minprice}
-      max={this.state.categorie.maxprice}
-      value={value}
-      onChange={changeEvent => setValue(changeEvent.target.value)}
-    />
+    
+    <Form>
+      <Form.Group as={Row}>
+        <Col xs="9">
+          <RangeSlider 
+            value={value}
+            onChange={e => setValue(e.target.value)}
+            min={0}
+            max={100}
+          />
+        </Col>
+      </Form.Group>
+    </Form>
   );
 }
 

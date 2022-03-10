@@ -7,7 +7,7 @@ function refreshPage() {
 }
 
 const Navigation = (props) => {
-    console.log("props",props);
+
     let totalArticles=0;
     console.log(props.cart);
     if(props.cart.length>0){

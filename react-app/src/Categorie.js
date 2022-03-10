@@ -1,8 +1,7 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import Navigation from './components/Navigation';
 import MyArticleCard from './components/MyArticleCard';
 import Footer from './components/Footer';
-import Pricing from './components/Pricing';
 import { Row, Col, Container} from 'react-bootstrap';
 
 class Categorie extends Component {
@@ -19,9 +18,11 @@ class Categorie extends Component {
         const response = await fetch('http://localhost:1337/api/articles?populate=*&filters[categorie][id][$eq]='+id, {method: 'GET', headers: {'Accept': 'application/json', 'Content-Type':'application/json'}})
         const articles = await response.json()
         console.log(articles)
-        this.setState({articles:articles})
-
+        this.setState({articles:articles})    
     }
+
+
+    
     render() {
         return(
             <div className="App" >

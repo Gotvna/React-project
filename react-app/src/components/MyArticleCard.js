@@ -15,10 +15,8 @@ const MyArticleCard = (props) => {
           {props.article.attributes.description} <br />
           price: {props.article.attributes.price}€ <br />
         </Card.Text>
-        <Button variant="primary" className="bg-dark" ><Link to={"/article/"+props.article.id}>details</Link></Button>
         <Button variant="primary" className="bg-dark button-add" onClick={() => {
           props.addToCart(props.article)
-          props.saveCart()
         }}>Ajouter au panier</Button>
       </Card.Body>
     </Card>
